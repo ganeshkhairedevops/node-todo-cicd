@@ -10,6 +10,7 @@ pipeline{
         stage("Trivy File System Scan"){
             steps{
                 echo "trivy scan"
+                sh "trivy fs ."
             }
         }
         stage("build"){
